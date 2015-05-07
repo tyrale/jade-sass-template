@@ -1,0 +1,26 @@
+.financing
+	.fin-banner
+		p.fin-toggle financing
+			span.fin-icon
+
+	.fin-plans
+		p.help select a payment plan
+		.payments
+			mixin payment(plan)
+				.payment
+					h1= plan
+
+			+payment('1')
+			+payment('2')
+			+payment('3')
+			+payment('4')
+
+	.plan-detail
+		p.help Pay in full
+		mixin discount(number, term)
+			.discount
+				h1= number
+				p.support = term
+
+		+discount('5%', 'discount')
+		+discount('$0', 'fee')

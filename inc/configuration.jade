@@ -1,0 +1,18 @@
+.configuration
+	.config-banner
+		p package options
+		p.config-toggle configuration
+			span.config-icon
+	mixin package(title, price, description)
+		.package
+			h1= title
+				span.plus-icon
+				span.price 
+					= price
+			.description
+				= description
+
+	+package('Basic', '$3500', 'Help me')
+	+package('Damon', '$4500', 'Help me')
+	+package('Lingual', '$9100', 'Help me')
+	+package('Invisalign', '$6800', 'Help me')

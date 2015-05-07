@@ -1,0 +1,46 @@
+.financing
+	+finance-gradient()
+	+size(296px inherit)
+	+calc(height, "100% - 60px")
+	+position(absolute, null 0 0 null)
+	.fin-banner	
+		+green-border()
+		+clearfix
+		+size(100% 60px)
+		padding: 20px 20px 0 20px
+		p
+			font-size: rem(14)
+			color: $support-green
+			text-transform: uppercase
+			float: left
+			&.fin-toggle
+				+position(relative)
+				padding-left: 30px
+				span.fin-icon
+					background-image: url("../img/fin-icon.png")
+					+size(20px 18px)
+					display: inline-block
+					+position(absolute, null null null 0)
+	.fin-plans
+		padding: 10px 20px
+		p
+		.payments
+			+clearfix
+			.payment
+				+size(53px 53px)
+				+full-border($green-border)
+				text-align: center
+				h1
+					margin: 0
+				float: left
+
+
+
+
+
+	.help
+		font-size: rem(14)
+		color: $support-green
+		text-transform: uppercase
+		//float: left
+		margin-top: 0px
