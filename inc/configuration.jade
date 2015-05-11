@@ -3,16 +3,55 @@
 		p package options
 		p.config-toggle configuration
 			span.config-icon
-	mixin package(title, price, description)
-		.package
+	mixin package(title, price)
+		.package(class!=attributes.class)
 			h1= title
 				span.plus-icon
 				span.price 
 					= price
-			.description
-				= description
+			if block
+				block
+			else
 
-	+package('Basic', '$3500', 'Help me')
-	+package('Damon', '$4500', 'Help me')
-	+package('Lingual', '$9100', 'Help me')
-	+package('Invisalign', '$6800', 'Help me')
+	+package('Basic', '$3500')(class="basic expand")
+		.display
+			img(src="http://placehold.it/210x140", alt="")
+			h1 Vestibulum id ligula porta felis euismod semper.
+		.content
+			.description
+				p Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis.
+			.list
+				ul
+					li - teste
+					li - teste
+					li - teste
+					li - teste
+
+		.addons
+			.one.selected
+				.top
+					h3 Clear Braces
+						span.plus-icon
+						span.price $1000
+				.bottom
+					img(src="http://placehold.it/130x130", alt="")
+					.notes
+						p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus.
+			.two
+				.top
+					h3 Wild Smiles
+						span.plus-icon
+						span.price $400
+				.bottom
+					img(src="http://placehold.it/130x130", alt="")
+					.notes
+						p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus.
+	+package('Damon', '$4500')
+		.description
+			p .description
+	+package('Lingual', '$9100')
+		.description
+			p .description
+	+package('Invisalign', '$6800')
+		.description
+			p .description

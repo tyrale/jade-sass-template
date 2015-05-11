@@ -1,26 +1,122 @@
-.financing
+.financing.long
 	.fin-banner
-		p.fin-toggle financing
+		p.fin-toggle.help financing
 			span.fin-icon
 
 	.fin-plans
 		p.help select a payment plan
 		.payments
 			mixin payment(plan)
-				.payment
+				.payment(class!=attributes.class)
 					h1= plan
-
+					block
 			+payment('1')
-			+payment('2')
+				p.help Pay in Full
+			+payment('2')(class="selected")
+				p.help Min Down, Low Monthly
 			+payment('3')
+				p.help Same as Cash
 			+payment('4')
+				p.help Some Other Long Title for a Payment Plan
 
-	.plan-detail
+	.plan-detail.one.hide
 		p.help Pay in full
 		mixin discount(number, term)
 			.discount
 				h1= number
-				p.support = term
+				p.support= term
 
 		+discount('5%', 'discount')
 		+discount('$0', 'fee')
+
+		.support
+			p A 5% courtesy discount will be extended to those patients who pay for treatment in full on or before the separators appointment (3% discount for credit cards)
+
+			p The reduction in fee will be calculated on the amount paid out of pocket by the patient/parent excluding any payment estimated from your insurance company.
+	.plan-detail.two
+		p.help Min down, no interest
+		.left
+			.discount
+				h1 $800
+				p.support down payment
+			.discount
+				h1 24
+				p.support months
+		.right
+			.item
+				p.help Insurance
+				h1.dollar $600
+			.item
+				p.help Summer Savings
+				h1.dollar $150
+			.item
+				p.help Down Payment
+				p.dollar
+					select(dir="rtl")
+						option 150
+						option 93.75
+						option 93.75
+						option 93.75
+			.item
+				p.help Monthly
+				p.dollar
+					select(dir="rtl")
+						option 93.75
+						option 93.75
+						option 93.75
+						option 93.75
+		.support
+			p An initial fee of $800 is due on the date separators are placed.The balance is to be paid in 24 monthly payments. These monthly payments are on the average $90 - $208.
+
+	.fin-options
+		p.help select a payment plan
+
+		- var down = '$800'
+		- var duration = '24m'
+		- var monthly = '$433.32'
+
+		mixin option(title, high, low)
+			.option
+				.line
+				.lock
+				p.help= title
+				.dragger
+					.high= high
+					.low= low
+					.floater(class!=attributes.class)
+						.handle
+						.value
+							block
+						.marker
+
+		+option('Down Payment', '$3500', '$0')(class="down")
+			p #{down}
+
+		+option('Duration', '24m', '1m')(class="duration")
+			p #{duration}
+
+		+option('Installments', '$900', '$0')(class="installments")
+			p #{monthly}
+
+	.fin-bottom
+		p.help Snapshots
+		.select
+			select
+				option New Snapshot
+				option Saved Snapshot
+		button Save Snapshot
+	.fin-copy
+		.support
+			p An initial fee of $800 is due on the date separators are placed.The balance is to be paid in 24 monthly payments. These monthly payments are on the average $90 - $208.
+	.fin-price
+		ul
+			li.help total
+				span $7000
+			li.help fee
+				span $150
+			li.help credits
+				span $0
+			li.help insurance
+				span $0
+		.buy
+			button Buy Like This

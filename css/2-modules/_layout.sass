@@ -1,4 +1,17 @@
 body
+	.hide
+		display: none
+	.landing
+		+position(absolute, 0 0 0 0)
+		+landing-gradient
+		opacity: 1
+		z-index: 10
+		+size(1024px 768px)
+		.title
+			margin: 300px auto
+			width: 300px
+			text-align: center
+			display: block
 	.cover
 		background-image: url("../img/bg.png")
 		+size(1024px 768px)
@@ -9,3 +22,4 @@ body
 		z-index: 1
 		+size(1024px 768px)
 		background-image: url("../img/cover.png")
+		overflow: hidden

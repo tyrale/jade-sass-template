@@ -2,6 +2,7 @@
 	+congif-gradient()
 	+size(730px inherit)
 	+calc(height, "100% - 60px")
+	+transition(all 0.5s)
 
 	.config-banner
 		+purple-border()
@@ -25,8 +26,12 @@
 
 	.package
 		+full-border($purple-border)
+		+transition(all 0.5s)
 		padding: 20px
 		margin: 20px 
+		+clearfix
+		.display, .addons, .list
+			display: none
 		h1 
 			margin: 0
 			+position(relative)
@@ -42,3 +47,114 @@
 			font-size: rem(18)
 			color: $type-green
 			font-weight: 200
+
+		// Change page
+		&.expand
+			margin-bottom: 0
+			h1
+				margin-bottom: 10px
+				span.plus-icon
+					background-image: url("../img/full-minus.svg")
+			.display, .addons
+				display: block
+			.display
+				+clearfix
+				margin-bottom: 10px
+				img
+					border-radius: 4px
+					float: left
+					margin-right: 20px
+					+size(210px 140px)
+				h1
+					color: $type-green
+			.content
+				+clearfix
+				.description
+					float: left
+					width: 50%
+					p 
+				.list
+					color: $type-green
+					margin-left: 60px
+					float: left
+			.addons
+				+clearfix
+				> div
+					+full-border($purple-border)
+					width: 48%
+					float: left
+					padding: 10px
+					&:first-child
+						margin-right: 20px
+					&.selected
+						background: rgba(255,255,255,0.1)
+						.top h3 span.plus-icon
+							background-image: url("../img/small-minus.svg")
+				.top
+					h3
+						font-weight: 200
+						font-size: rem(18)
+						color: $type-green
+						+position(relative)
+						span.plus-icon
+							margin-left: 6px
+							background-image: url("../img/small-plus.svg")
+							+size(21px 21px)
+							display: inline-block
+							+position(absolute)
+
+						span.price
+							float: right
+				.bottom
+					img
+						float: left
+						border-radius: 6px
+						margin: 10px 20px 0 0
+						+size(130px 130px)
+					.notes
+						p
+							padding-top: 5px
+							color: $type-green
+							margin-bottom: 0
+		&.collapse
+			height: 0px
+			padding: 5px
+			margin: 5px 20px
+			h1, .description, .display, .addons
+				display: none
+	&.short
+		+size(294px inherit)
+		.config-banner
+			p:first-child
+				display: none
+		.package
+			padding: 10px
+			.description, .display
+				display: none
+			h1
+				font-size: rem(26)
+				span
+					padding-top: 2px
+				span.plus-icon
+					+size(28px 28px)
+					background-size: 28px 28px
+			.addons
+				> div
+					padding: 0
+					border: none
+					width: 100%
+					&.selected
+						background: none
+					.bottom
+						display: none
+					&:last-child
+						display: none
+
+
+
+
+
+
+
+
+

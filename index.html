@@ -3,12 +3,22 @@
   <head>
     <title>Jade Template</title>
     <link href="css/app.css" rel="stylesheet">
+    <link rel="apple-touch-icon" href="apple-touch-icon-iphone.png">
+    <link rel="apple-touch-startup-image" href="startup-image.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="js/client.js"></script>
   </head>
 </html>
 <body>
+  <div class="landing">
+    <div class="title">
+      <h1>Landing Page</h1>
+    </div>
+  </div>
   <div class="cover"></div>
   <div class="wrapper">
     <div class="client-banner"><span class="logo"></span><span class="patient-info">
@@ -22,58 +32,230 @@
         <p>package options</p>
         <p class="config-toggle">configuration<span class="config-icon"></span></p>
       </div>
-            <div class="package">
+            <div class="package basic expand">
               <h1>Basic<span class="plus-icon"></span><span class="price"> $3500</span></h1>
-              <div class="description">Help me
+              <div class="display"><img src="http://placehold.it/210x140" alt="">
+                <h1>Vestibulum id ligula porta felis euismod semper.</h1>
+              </div>
+              <div class="content">
+                <div class="description">
+                  <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis.</p>
+                </div>
+                <div class="list">
+                  <ul>
+                    <li>- teste</li>
+                    <li>- teste</li>
+                    <li>- teste</li>
+                    <li>- teste</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="addons">
+                <div class="one selected">
+                  <div class="top">
+                    <h3>Clear Braces<span class="plus-icon"></span><span class="price">$1000</span></h3>
+                  </div>
+                  <div class="bottom"><img src="http://placehold.it/130x130" alt="">
+                    <div class="notes">
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="two">
+                  <div class="top">
+                    <h3>Wild Smiles<span class="plus-icon"></span><span class="price">$400</span></h3>
+                  </div>
+                  <div class="bottom"><img src="http://placehold.it/130x130" alt="">
+                    <div class="notes">
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="package">
               <h1>Damon<span class="plus-icon"></span><span class="price"> $4500</span></h1>
-              <div class="description">Help me
+              <div class="description">
+                <p>.description</p>
               </div>
             </div>
             <div class="package">
               <h1>Lingual<span class="plus-icon"></span><span class="price"> $9100</span></h1>
-              <div class="description">Help me
+              <div class="description">
+                <p>.description</p>
               </div>
             </div>
             <div class="package">
               <h1>Invisalign<span class="plus-icon"></span><span class="price"> $6800</span></h1>
-              <div class="description">Help me
+              <div class="description">
+                <p>.description</p>
               </div>
             </div>
     </div>
-    <div class="financing">
+    <div class="financing long">
       <div class="fin-banner">
-        <p class="fin-toggle">financing<span class="fin-icon"></span></p>
+        <p class="fin-toggle help">financing<span class="fin-icon"></span></p>
       </div>
       <div class="fin-plans">
         <p class="help">select a payment plan</p>
         <div class="payments">
                     <div class="payment">
                       <h1>1</h1>
+                      <p class="help">Pay in Full</p>
                     </div>
-                    <div class="payment">
+                    <div class="payment selected">
                       <h1>2</h1>
+                      <p class="help">Min Down, Low Monthly</p>
                     </div>
                     <div class="payment">
                       <h1>3</h1>
+                      <p class="help">Same as Cash</p>
                     </div>
                     <div class="payment">
                       <h1>4</h1>
+                      <p class="help">Some Other Long Title for a Payment Plan</p>
                     </div>
         </div>
       </div>
-      <div class="plan-detail">
+      <div class="plan-detail one hide">
         <p class="help">Pay in full</p>
                 <div class="discount">
                   <h1>5%</h1>
-                  <p class="support">= term</p>
+                  <p class="support">discount</p>
                 </div>
                 <div class="discount">
                   <h1>$0</h1>
-                  <p class="support">= term</p>
+                  <p class="support">fee</p>
                 </div>
+        <div class="support">
+          <p>A 5% courtesy discount will be extended to those patients who pay for treatment in full on or before the separators appointment (3% discount for credit cards)</p>
+          <p>The reduction in fee will be calculated on the amount paid out of pocket by the patient/parent excluding any payment estimated from your insurance company.</p>
+        </div>
+      </div>
+      <div class="plan-detail two">
+        <p class="help">Min down, no interest</p>
+        <div class="left">
+          <div class="discount">
+            <h1>$800</h1>
+            <p class="support">down payment</p>
+          </div>
+          <div class="discount">
+            <h1>24</h1>
+            <p class="support">months</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="item">
+            <p class="help">Insurance</p>
+            <h1 class="dollar">$600</h1>
+          </div>
+          <div class="item">
+            <p class="help">Summer Savings</p>
+            <h1 class="dollar">$150</h1>
+          </div>
+          <div class="item">
+            <p class="help">Down Payment</p>
+            <p class="dollar">
+              <select dir="rtl">
+                <option>150</option>
+                <option>93.75</option>
+                <option>93.75</option>
+                <option>93.75</option>
+              </select>
+            </p>
+          </div>
+          <div class="item">
+            <p class="help">Monthly</p>
+            <p class="dollar">
+              <select dir="rtl">
+                <option>93.75</option>
+                <option>93.75</option>
+                <option>93.75</option>
+                <option>93.75</option>
+              </select>
+            </p>
+          </div>
+        </div>
+        <div class="support">
+          <p>An initial fee of $800 is due on the date separators are placed.The balance is to be paid in 24 monthly payments. These monthly payments are on the average $90 - $208.</p>
+        </div>
+      </div>
+      <div class="fin-options">
+        <p class="help">select a payment plan</p>
+                <div class="option">
+                  <div class="line"></div>
+                  <div class="lock"></div>
+                  <p class="help">Down Payment</p>
+                  <div class="dragger">
+                    <div class="high">$3500</div>
+                    <div class="low">$0</div>
+                    <div class="floater down">
+                      <div class="handle"></div>
+                      <div class="value">
+                        <p>$800</p>
+                      </div>
+                      <div class="marker"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="line"></div>
+                  <div class="lock"></div>
+                  <p class="help">Duration</p>
+                  <div class="dragger">
+                    <div class="high">24m</div>
+                    <div class="low">1m</div>
+                    <div class="floater duration">
+                      <div class="handle"></div>
+                      <div class="value">
+                        <p>24m</p>
+                      </div>
+                      <div class="marker"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="line"></div>
+                  <div class="lock"></div>
+                  <p class="help">Installments</p>
+                  <div class="dragger">
+                    <div class="high">$900</div>
+                    <div class="low">$0</div>
+                    <div class="floater installments">
+                      <div class="handle"></div>
+                      <div class="value">
+                        <p>$433.32</p>
+                      </div>
+                      <div class="marker"></div>
+                    </div>
+                  </div>
+                </div>
+      </div>
+      <div class="fin-bottom">
+        <p class="help">Snapshots</p>
+        <div class="select">
+          <select>
+            <option>New Snapshot</option>
+            <option>Saved Snapshot</option>
+          </select>
+        </div>
+        <button>Save Snapshot</button>
+      </div>
+      <div class="fin-copy">
+        <div class="support">
+          <p>An initial fee of $800 is due on the date separators are placed.The balance is to be paid in 24 monthly payments. These monthly payments are on the average $90 - $208.</p>
+        </div>
+      </div>
+      <div class="fin-price">
+        <ul>
+          <li class="help">total<span>$7000</span></li>
+          <li class="help">fee<span>$150</span></li>
+          <li class="help">credits<span>$0</span></li>
+          <li class="help">insurance<span>$0</span></li>
+        </ul>
+        <div class="buy">
+          <button>Buy Like This</button>
+        </div>
       </div>
     </div>
   </div>
