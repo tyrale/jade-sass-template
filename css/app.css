@@ -383,7 +383,7 @@ td, th {
 h1 {
   font-family: "Helvetica Neue", san-serif;
   font-size: 2.125em;
-  color: white;
+  color: #355ca8;
   font-weight: 200;
   line-height: 1.4em;
   margin-bottom: 0; }
@@ -391,7 +391,7 @@ h1 {
 h2 {
   font-family: "Helvetica Neue", san-serif;
   font-size: 2.125em;
-  color: white;
+  color: #355ca8;
   font-weight: 900;
   line-height: 1.4em;
   margin-bottom: 0; }
@@ -399,587 +399,161 @@ h2 {
 p {
   font-weight: 300;
   margin-top: 0px; }
-  p.subline {
-    font-size: 1.125em;
-    color: white; }
+
+select {
+  background: #fff;
+  width: 100%;
+  border: solid 1px #7aacc8;
+  margin-top: 30px;
+  border-radius: 0;
+  color: #5595b8;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 6px 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+
+button {
+  background-color: #f0d53e; }
 
 body .hide {
   display: none; }
-body .landing {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #e625406b;
-  background-image: -webkit-linear-gradient(#e6783a61, #e625406b, horizontal);
-  background-image: linear-gradient(to ,#e625406b, horizontal);
-  background-image: -webkit-linear-gradient(left bottom, #783a61 0%, #25406b 99%, #25406b 100%);
-  background-image: linear-gradient(to right top , #783a61 0%, #25406b 99%, #25406b 100%);
-  opacity: 1;
-  z-index: 10;
-  height: 768px;
-  width: 1024px; }
-  body .landing .title {
-    margin: 300px auto;
-    width: 300px;
-    text-align: center;
-    display: block; }
-body .cover {
-  background-image: url("../img/bg.png");
-  height: 768px;
-  width: 1024px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1; }
-body .wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  height: 768px;
-  width: 1024px;
-  background-image: url("../img/cover.png");
-  overflow: hidden; }
-
-.client-banner {
-  background-color: #e6243f68;
-  background-image: -webkit-linear-gradient(#e6304b71, #e6243f68, horizontal);
-  background-image: linear-gradient(to ,#e6243f68, horizontal);
-  background-image: -webkit-linear-gradient(left bottom, rgba(48, 75, 113, 0.9) 0%, rgba(36, 63, 104, 0.9) 99%, rgba(36, 63, 104, 0.9) 100%);
-  background-image: linear-gradient(to right top , rgba(48, 75, 113, 0.9) 0%, rgba(36, 63, 104, 0.9) 99%, rgba(36, 63, 104, 0.9) 100%);
-  height: 60px;
-  width: 100%;
-  border-bottom: 1px solid rgba(145, 189, 156, 0.6);
-  padding: 0px 20px 0; }
-  .client-banner span.logo {
-    background-image: url("../img/mill-creek.png");
-    height: 41px;
-    width: 234px;
-    display: inline-block;
-    margin: 10px 0; }
-  .client-banner span.patient-info {
-    float: right;
-    font-size: 0.875rem;
-    color: #7E899D;
-    text-align: right; }
-    .client-banner span.patient-info p.date {
-      text-transform: uppercase;
-      margin: 0; }
-    .client-banner span.patient-info .name p.help {
+body section {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.75rem; }
+  body section:after {
+    content: "";
+    display: table;
+    clear: both; }
+  body section .swatches {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-top: 1.875rem; }
+    body section .swatches:last-child {
+      margin-right: 0; }
+    body section .swatches .color-wow-item {
+      height: 40px;
+      width: 40px;
+      overflow: hidden;
       float: left;
-      margin: 0;
-      margin-top: 12px; }
-    .client-banner span.patient-info .name h1 {
-      margin: 0;
-      float: left;
-      color: #88B3B2;
-      margin-left: 6px; }
-
-.configuration {
-  background-color: #e625406b;
-  background-image: -webkit-linear-gradient(#e6783a61, #e625406b, horizontal);
-  background-image: linear-gradient(to ,#e625406b, horizontal);
-  background-image: -webkit-linear-gradient(left bottom, rgba(120, 58, 97, 0.9) 0%, rgba(37, 64, 107, 0.9) 99%, rgba(37, 64, 107, 0.9) 100%);
-  background-image: linear-gradient(to right top , rgba(120, 58, 97, 0.9) 0%, rgba(37, 64, 107, 0.9) 99%, rgba(37, 64, 107, 0.9) 100%);
-  width: 730px;
-  height: -webkit-calc(100% - 60px);
-  height: calc(100% - 60px);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s; }
-  .configuration .config-banner {
-    border-bottom: 1px solid rgba(145, 189, 156, 0.6);
-    height: 60px;
-    width: 100%;
-    padding: 20px 20px 0 20px; }
-    .configuration .config-banner:after {
-      content: "";
-      display: table;
-      clear: both; }
-    .configuration .config-banner p {
-      font-size: 0.875rem;
-      color: #7E899D;
-      text-transform: uppercase;
-      float: left; }
-      .configuration .config-banner p.config-toggle {
-        float: right;
-        position: relative;
-        padding-right: 30px; }
-        .configuration .config-banner p.config-toggle span.config-icon {
-          background-image: url("../img/config-icon.png");
-          height: 24px;
-          width: 23px;
-          display: inline-block;
-          position: absolute;
-          right: 0; }
-  .configuration .package {
-    border: 1px solid rgba(145, 189, 156, 0.6);
-    border-radius: 6px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-    padding: 20px;
-    margin: 20px; }
-    .configuration .package:after {
-      content: "";
-      display: table;
-      clear: both; }
-    .configuration .package .display, .configuration .package .addons, .configuration .package .list {
-      display: none; }
-    .configuration .package h1 {
-      margin: 0;
       position: relative; }
-      .configuration .package h1 span.plus-icon {
-        background-image: url("../img/full-plus.svg");
-        height: 33px;
-        width: 33px;
-        display: inline-block;
-        margin-left: 10px;
-        position: relative;
-        top: 5px;
+      body section .swatches .color-wow-item img {
+        height: 100%; }
+      body section .swatches .color-wow-item:before {
+        content: "";
+        border: 4px solid transparent;
+        position: absolute;
+        top: 0;
         right: 0;
         bottom: 0;
         left: 0; }
-      .configuration .package h1 span.price {
-        float: right; }
-    .configuration .package .description {
-      font-size: 1.125rem;
-      color: #88B3B2;
-      font-weight: 200; }
-    .configuration .package.expand {
-      margin-bottom: 0; }
-      .configuration .package.expand h1 {
-        margin-bottom: 10px; }
-        .configuration .package.expand h1 span.plus-icon {
-          background-image: url("../img/full-minus.svg"); }
-      .configuration .package.expand .display, .configuration .package.expand .addons {
-        display: block; }
-      .configuration .package.expand .display {
-        margin-bottom: 10px; }
-        .configuration .package.expand .display:after {
-          content: "";
-          display: table;
-          clear: both; }
-        .configuration .package.expand .display img {
-          border-radius: 4px;
-          float: left;
-          margin-right: 20px;
-          height: 140px;
-          width: 210px; }
-        .configuration .package.expand .display h1 {
-          color: #88B3B2; }
-      .configuration .package.expand .content:after {
-        content: "";
-        display: table;
-        clear: both; }
-      .configuration .package.expand .content .description {
-        float: left;
-        width: 50%; }
-      .configuration .package.expand .content .list {
-        color: #88B3B2;
-        margin-left: 60px;
-        float: left; }
-      .configuration .package.expand .addons:after {
-        content: "";
-        display: table;
-        clear: both; }
-      .configuration .package.expand .addons > div {
-        border: 1px solid rgba(145, 189, 156, 0.6);
-        border-radius: 6px;
-        width: 48%;
-        float: left;
-        padding: 10px; }
-        .configuration .package.expand .addons > div:first-child {
-          margin-right: 20px; }
-        .configuration .package.expand .addons > div.selected {
-          background: rgba(255, 255, 255, 0.1); }
-          .configuration .package.expand .addons > div.selected .top h3 span.plus-icon {
-            background-image: url("../img/small-minus.svg"); }
-      .configuration .package.expand .addons .top h3 {
-        font-weight: 200;
-        font-size: 1.125rem;
-        color: #88B3B2;
-        position: relative; }
-        .configuration .package.expand .addons .top h3 span.plus-icon {
-          margin-left: 6px;
-          background-image: url("../img/small-plus.svg");
-          height: 21px;
-          width: 21px;
-          display: inline-block;
-          position: absolute; }
-        .configuration .package.expand .addons .top h3 span.price {
-          float: right; }
-      .configuration .package.expand .addons .bottom img {
-        float: left;
-        border-radius: 6px;
-        margin: 10px 20px 0 0;
-        height: 130px;
-        width: 130px; }
-      .configuration .package.expand .addons .bottom .notes p {
-        padding-top: 5px;
-        color: #88B3B2;
-        margin-bottom: 0; }
-    .configuration .package.collapse {
-      height: 0px;
-      padding: 5px;
-      margin: 5px 20px; }
-      .configuration .package.collapse h1, .configuration .package.collapse .description, .configuration .package.collapse .display, .configuration .package.collapse .addons {
-        display: none; }
-  .configuration.short {
-    width: 294px; }
-    .configuration.short .config-banner p:first-child {
-      display: none; }
-    .configuration.short .package {
-      padding: 10px; }
-      .configuration.short .package .description, .configuration.short .package .display {
-        display: none; }
-      .configuration.short .package h1 {
-        font-size: 1.625rem; }
-        .configuration.short .package h1 span {
-          padding-top: 2px; }
-        .configuration.short .package h1 span.plus-icon {
-          height: 28px;
-          width: 28px;
-          background-size: 28px 28px; }
-      .configuration.short .package .addons > div {
-        padding: 0;
-        border: none;
+      body section .swatches .color-wow-item:hover:before {
+        border-color: #f0d53e; }
+  body section .sidebar {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-right: 0; }
+    body section .sidebar:last-child {
+      margin-right: 0; }
+    body section .sidebar .product {
+      margin-bottom: 1.25rem; }
+    body section .sidebar .hover {
+      margin-top: 0.625rem;
+      background-color: #355ca8;
+      overflow: hidden;
+      height: 160px;
+      position: relative; }
+      body section .sidebar .hover:before {
+        content: "Swatch Preview";
+        position: absolute;
+        bottom: 0.625rem;
+        left: 0.625rem; }
+      body section .sidebar .hover img {
         width: 100%; }
-        .configuration.short .package .addons > div.selected {
-          background: none; }
-        .configuration.short .package .addons > div .bottom {
-          display: none; }
-        .configuration.short .package .addons > div:last-child {
-          display: none; }
-
-.financing {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  background-color: #e662a8b0;
-  background-image: -webkit-linear-gradient(#e695b99b, #e662a8b0, horizontal);
-  background-image: linear-gradient(to ,#e662a8b0, horizontal);
-  background-image: -webkit-linear-gradient(left bottom, rgba(149, 185, 155, 0.9) 0%, rgba(98, 168, 176, 0.9) 100%);
-  background-image: linear-gradient(to right top , rgba(149, 185, 155, 0.9) 0%, rgba(98, 168, 176, 0.9) 100%);
-  box-shadow: 0 0 2px #000000;
-  width: 296px;
-  height: -webkit-calc(100% - 60px);
-  height: calc(100% - 60px);
-  position: absolute;
-  right: 0;
-  bottom: 0; }
-  .financing .fin-options, .financing .fin-bottom, .financing .fin-price, .financing .fin-copy {
-    display: none; }
-  .financing .fin-banner {
-    border-bottom: 1px solid rgba(55, 64, 119, 0.6);
-    height: 60px;
-    width: 100%;
-    padding: 20px 20px 0 20px; }
-    .financing .fin-banner:after {
-      content: "";
-      display: table;
-      clear: both; }
-    .financing .fin-banner .help {
-      font-size: 0.875rem;
-      color: #3D4157;
-      text-transform: uppercase;
-      float: left; }
-      .financing .fin-banner .help.fin-toggle {
-        position: relative;
-        padding-left: 30px; }
-        .financing .fin-banner .help.fin-toggle span.fin-icon {
-          background-image: url("../img/fin-icon.png");
-          height: 18px;
-          width: 20px;
-          display: inline-block;
-          position: absolute;
-          left: 0; }
-  .financing .fin-plans {
-    padding: 10px 20px 20px;
-    border-bottom: 1px solid rgba(55, 64, 119, 0.6); }
-    .financing .fin-plans .payments:after {
-      content: "";
-      display: table;
-      clear: both; }
-    .financing .fin-plans .payments .payment {
-      height: 53px;
-      width: 53px;
-      border: 1px solid rgba(55, 64, 119, 0.6);
-      border-radius: 6px;
-      text-align: center;
-      margin-right: 10px;
-      padding-top: 3px;
-      float: left; }
-      .financing .fin-plans .payments .payment p.help {
-        display: none; }
-      .financing .fin-plans .payments .payment h1 {
-        color: #53335C;
-        margin: 0; }
-      .financing .fin-plans .payments .payment.selected {
-        background-color: #e625406b;
-        background-image: -webkit-linear-gradient(#e6783a61, #e625406b, horizontal);
-        background-image: linear-gradient(to ,#e625406b, horizontal);
-        background-image: -webkit-linear-gradient(left bottom, rgba(120, 58, 97, 0.9) 0%, rgba(37, 64, 107, 0.9) 99%, rgba(37, 64, 107, 0.9) 100%);
-        background-image: linear-gradient(to right top , rgba(120, 58, 97, 0.9) 0%, rgba(37, 64, 107, 0.9) 99%, rgba(37, 64, 107, 0.9) 100%);
-        box-shadow: inset 0 0 2px #000000; }
-        .financing .fin-plans .payments .payment.selected h1 {
-          color: white; }
-  .financing .plan-detail {
-    padding: 10px 20px 20px; }
-    .financing .plan-detail:after {
-      content: "";
-      display: table;
-      clear: both; }
-    .financing .plan-detail .item .help {
-      margin: 0; }
-    .financing .plan-detail .discount {
-      height: 45%;
-      width: 45%;
-      float: left;
-      border: 1px solid rgba(55, 64, 119, 0.6);
-      border-radius: 6px;
-      text-align: center;
-      margin-right: 10px;
-      margin-bottom: 20px; }
-      .financing .plan-detail .discount h1 {
-        color: #53335C;
-        margin-top: 10px; }
-      .financing .plan-detail .discount p.support {
-        color: #53335C; }
-    .financing .plan-detail .support p {
-      color: #53335C;
-      font-size: 0.75rem;
-      margin-top: 10px; }
-    .financing .plan-detail .item {
-      margin-bottom: 10px; }
-      .financing .plan-detail .item p.dollar {
-        position: relative; }
-        .financing .plan-detail .item p.dollar span {
-          display: none; }
-        .financing .plan-detail .item p.dollar select {
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          -ms-appearance: none;
-          -o-appearance: none;
-          appearance: none;
-          background: transparent;
-          border-radius: 0;
-          border: none;
-          border-bottom: 1px solid rgba(55, 64, 119, 0.6);
-          padding-bottom: 5px;
-          min-width: 100px; }
-        .financing .plan-detail .item p.dollar:before {
-          content: "$";
-          position: absolute;
-          left: 0; }
-  .financing .dollar {
-    color: #53335C;
-    font-size: 1.5rem;
-    margin: 0; }
-  .financing .help {
-    font-size: 0.875rem;
-    color: #3D4157;
-    text-transform: uppercase;
-    margin-top: 0px; }
-  .financing.long {
-    width: 730px; }
-    .financing.long .plan-detail {
-      display: none; }
-    .financing.long .payments .payment {
-      width: -webkit-calc(25% - 8px);
-      width: calc(25% - 8px);
-      height: inherit; }
-      .financing.long .payments .payment:last-child {
-        margin-right: 0; }
-      .financing.long .payments .payment .help {
-        font-size: 0.75rem; }
-      .financing.long .payments .payment.selected .help {
-        color: white; }
-      .financing.long .payments .payment p.help {
-        display: block; }
-    .financing.long .fin-options {
-      display: block;
-      padding: 20px;
-      border-bottom: 1px solid rgba(55, 64, 119, 0.6); }
-      .financing.long .fin-options:after {
+    body section .sidebar .palette {
+      height: 180px;
+      overflow: hidden; }
+      body section .sidebar .palette:after {
         content: "";
         display: table;
         clear: both; }
-      .financing.long .fin-options .option {
-        background-color: #e625406b;
-        background-image: -webkit-linear-gradient(#e6783a61, #e625406b, horizontal);
-        background-image: linear-gradient(to ,#e625406b, horizontal);
-        background-image: -webkit-linear-gradient(left bottom, rgba(120, 58, 97, 0.9) 0%, rgba(37, 64, 107, 0.9) 99%, rgba(37, 64, 107, 0.9) 100%);
-        background-image: linear-gradient(to right top , rgba(120, 58, 97, 0.9) 0%, rgba(37, 64, 107, 0.9) 99%, rgba(37, 64, 107, 0.9) 100%);
+      body section .sidebar .palette ul.colors li {
+        width: -webkit-calc(33.333% - 7px);
+        width: calc(33.333% - 7px);
+        height: 80px;
         float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 31.76157%;
-        position: relative;
-        border-radius: 6px;
-        box-shadow: inset 0 0 2px #000000;
-        padding: 10px;
-        height: 230px; }
-        .financing.long .fin-options .option:last-child {
+        margin: 10px 10px 0 0;
+        background-color: #1F1F1F;
+        background-size: cover; }
+        body section .sidebar .palette ul.colors li:nth-of-type(3n) {
+          background-color: red;
           margin-right: 0; }
-        .financing.long .fin-options .option .line {
-          height: 100%;
-          width: 1px;
-          position: absolute;
-          top: 0;
-          right: 46px;
-          bottom: 0;
-          background-color: #e662a8b0;
-          background-image: -webkit-linear-gradient(#e695b99b, #e662a8b0, horizontal);
-          background-image: linear-gradient(to ,#e662a8b0, horizontal);
-          background-image: -webkit-linear-gradient(left bottom, rgba(149, 185, 155, 0.9) 0%, rgba(98, 168, 176, 0.9) 100%);
-          background-image: linear-gradient(to right top , rgba(149, 185, 155, 0.9) 0%, rgba(98, 168, 176, 0.9) 100%); }
-        .financing.long .fin-options .option p.help {
-          color: #7E899D; }
-        .financing.long .fin-options .option .dragger > div {
-          position: absolute;
-          color: #7E899D; }
-        .financing.long .fin-options .option .dragger .high {
-          right: 60px; }
-        .financing.long .fin-options .option .dragger .low {
-          right: 60px;
-          bottom: 10px; }
-        .financing.long .fin-options .option .dragger .floater {
-          right: 10px;
-          left: 10px;
-          height: 50px;
-          border-radius: 100px;
-          background-color: #e662a8b0;
-          background-image: -webkit-linear-gradient(#e695b99b, #e662a8b0, horizontal);
-          background-image: linear-gradient(to ,#e662a8b0, horizontal);
-          background-image: -webkit-linear-gradient(left bottom, rgba(149, 185, 155, 0.9) 0%, rgba(98, 168, 176, 0.9) 100%);
-          background-image: linear-gradient(to right top , rgba(149, 185, 155, 0.9) 0%, rgba(98, 168, 176, 0.9) 100%);
-          -webkit-mask-box-image: url("../img/floater-mask.png");
-          box-shadow: 0 0 2px #000000; }
-          .financing.long .fin-options .option .dragger .floater .handle {
-            position: absolute;
-            top: 25px;
-            left: 20px;
-            height: 1px;
-            width: 15px;
-            background-color: #e625406b;
-            background-image: -webkit-linear-gradient(#e6783a61, #e625406b, horizontal);
-            background-image: linear-gradient(to ,#e625406b, horizontal);
-            background-image: -webkit-linear-gradient(left bottom, rgba(120, 58, 97, 0.9) 0%, rgba(37, 64, 107, 0.9) 99%, rgba(37, 64, 107, 0.9) 100%);
-            background-image: linear-gradient(to right top , rgba(120, 58, 97, 0.9) 0%, rgba(37, 64, 107, 0.9) 99%, rgba(37, 64, 107, 0.9) 100%);
-            display: block; }
-            .financing.long .fin-options .option .dragger .floater .handle:before {
-              content: "";
-              position: absolute;
-              top: 6px;
-              right: 0;
-              bottom: 0;
-              left: 0;
-              height: 1px;
-              width: 15px;
-              background-color: #e625406b;
-              background-image: -webkit-linear-gradient(#e6783a61, #e625406b, horizontal);
-              background-image: linear-gradient(to ,#e625406b, horizontal);
-              background-image: -webkit-linear-gradient(left bottom, rgba(120, 58, 97, 0.9) 0%, rgba(37, 64, 107, 0.9) 99%, rgba(37, 64, 107, 0.9) 100%);
-              background-image: linear-gradient(to right top , rgba(120, 58, 97, 0.9) 0%, rgba(37, 64, 107, 0.9) 99%, rgba(37, 64, 107, 0.9) 100%);
-              display: block; }
-            .financing.long .fin-options .option .dragger .floater .handle:after {
-              content: "";
-              position: absolute;
-              top: -6px;
-              right: 0;
-              bottom: 0;
-              left: 0;
-              height: 1px;
-              width: 15px;
-              background-color: #e625406b;
-              background-image: -webkit-linear-gradient(#e6783a61, #e625406b, horizontal);
-              background-image: linear-gradient(to ,#e625406b, horizontal);
-              background-image: -webkit-linear-gradient(left bottom, rgba(120, 58, 97, 0.9) 0%, rgba(37, 64, 107, 0.9) 99%, rgba(37, 64, 107, 0.9) 100%);
-              background-image: linear-gradient(to right top , rgba(120, 58, 97, 0.9) 0%, rgba(37, 64, 107, 0.9) 99%, rgba(37, 64, 107, 0.9) 100%);
-              display: block; }
-          .financing.long .fin-options .option .dragger .floater .value {
-            color: #53335C;
-            font-size: 1.75rem;
-            position: absolute;
-            top: 3px;
-            right: 60px; }
-          .financing.long .fin-options .option .dragger .floater.down {
-            top: 140px; }
-          .financing.long .fin-options .option .dragger .floater.duration {
-            top: 30px; }
-          .financing.long .fin-options .option .dragger .floater.installments {
-            top: 120px; }
-    .financing.long .fin-bottom {
-      display: block;
-      padding: 10px 20px 0;
-      width: 200px;
-      height: 100%;
+    body section .sidebar .photo-preview {
+      margin-top: 0.625rem;
+      background-color: #355ca8;
+      overflow: hidden;
+      height: 160px;
+      position: relative; }
+      body section .sidebar .photo-preview:before {
+        content: "Photo Preview";
+        position: absolute;
+        bottom: 0.625rem;
+        left: 0.625rem; }
+      body section .sidebar .photo-preview img {
+        width: 100%; }
+  body section .sims ul.renders > li {
+    width: -webkit-calc(33.333% - 14px);
+    width: calc(33.333% - 14px);
+    height: 200px;
+    float: left;
+    margin: 20px 20px 0 0;
+    background-color: #1F1F1F; }
+    body section .sims ul.renders > li:nth-of-type(3n) {
+      background-color: red;
+      margin-right: 0; }
+  body section .options {
+    padding: 0 100px; }
+    body section .options .icons > div {
       float: left;
-      border-right: 1px solid rgba(55, 64, 119, 0.6); }
-      .financing.long .fin-bottom .select {
-        position: relative;
-        margin-bottom: 20px; }
-        .financing.long .fin-bottom .select select {
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          -ms-appearance: none;
-          -o-appearance: none;
-          appearance: none;
-          background: transparent;
-          border-radius: 0;
-          border: none;
-          border-bottom: 1px solid rgba(55, 64, 119, 0.6);
-          padding-bottom: 5px;
-          min-width: 100px;
-          padding-right: 20px;
-          font-weight: 200; }
-        .financing.long .fin-bottom .select:after {
-          content: "";
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          width: 0;
-          height: 0;
-          border-left: 6px solid transparent;
-          border-right: 6px solid transparent;
-          border-top: 6px solid #53335C; }
-      .financing.long .fin-bottom button {
-        border: 1px solid rgba(55, 64, 119, 0.6);
-        border-radius: 6px;
-        background: transparent;
-        padding: 5px; }
-    .financing.long .fin-copy {
       display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      body section .options .icons > div:last-child {
+        margin-right: 0; }
+      body section .options .icons > div > i {
+        height: 100px;
+        width: 100px;
+        background-color: #53335C;
+        display: block; }
+  body section .option-content {
+    padding: 0 100px; }
+    body section .option-content .left, body section .option-content .right {
+      padding: 0 20px;
       float: left;
-      width: 300px;
-      height: 100%;
-      padding: 10px 20px 0;
-      color: #53335C;
-      border-right: 1px solid rgba(55, 64, 119, 0.6); }
-    .financing.long .fin-price {
       display: block;
-      padding: 10px 0 0 20px;
-      float: left;
-      height: 100%; }
-      .financing.long .fin-price ul {
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      body section .option-content .left:last-child, body section .option-content .right:last-child {
+        margin-right: 0; }
+      body section .option-content .left .sims ul li, body section .option-content .right .sims ul li {
+        width: -webkit-calc(33.333% - 7px);
+        width: calc(33.333% - 7px);
+        height: 80px;
         float: left;
-        margin-right: 20px;
-        margin-bottom: 10px; }
-        .financing.long .fin-price ul li {
-          width: 190px; }
-          .financing.long .fin-price ul li span {
-            float: right; }
-      .financing.long .fin-price .buy button {
-        border: 1px solid rgba(55, 64, 119, 0.6);
-        border-radius: 6px;
-        background: transparent;
-        padding: 5px; }
+        margin: 10px 10px 0 0;
+        background-color: #1F1F1F;
+        background-size: cover; }
+        body section .option-content .left .sims ul li:nth-of-type(3n), body section .option-content .right .sims ul li:nth-of-type(3n) {
+          background-color: red;
+          margin-right: 0; }
 
 /*# sourceMappingURL=app.css.map */

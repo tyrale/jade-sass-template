@@ -1,25 +1,100 @@
 body
 	.hide
 		display: none
-	.landing
-		+position(absolute, 0 0 0 0)
-		+landing-gradient
-		opacity: 1
-		z-index: 10
-		+size(1024px 768px)
-		.title
-			margin: 300px auto
-			width: 300px
-			text-align: center
-			display: block
-	.cover
-		background-image: url("../img/bg.png")
-		+size(1024px 768px)
-		+position(absolute, 0 0 0 0)
-		z-index: -1
-	.wrapper
-		+position(absolute, 0 0 0 0)
-		z-index: 1
-		+size(1024px 768px)
-		background-image: url("../img/cover.png")
-		overflow: hidden
+	section
+		+outer-container
+		margin-bottom: rem(60px)
+		.swatches
+			+span-columns(8)
+			margin-top: rem(30)
+			.color-wow-item
+				+size(40px 40px)
+				overflow: hidden
+				float: left
+				+position(relative)
+				img
+					height: 100%
+				&:before
+					content: ''
+					border: 4px solid transparent
+					+position(absolute, 0 0 0 0)
+				&:hover:before
+					border-color: $client-yellow
+		.sidebar
+			+span-columns(4)
+			+omega
+			.product
+				margin-bottom: rem(20)
+				select
+					option
+
+			.photo
+				a
+			.hover
+				+preview("Swatch Preview")
+			.palette
+				+clearfix
+				height: 180px
+				overflow: hidden
+				ul.colors
+					li
+						+palette-holders()
+
+			.photo-preview
+				+preview("Photo Preview")
+		.sims
+			h2
+			ul.renders
+				> li
+					$width: 33.333%
+					+calc(width, "#{$width} - 14px")
+					height: 200px
+					float: left
+					margin: 20px 20px 0 0
+					background-color: $client-gray-light
+					&:nth-of-type(3n)
+						background-color: red
+						margin-right: 0
+
+		.options
+			padding: 0 100px
+			.icons
+				> div
+					+span-columns(3)
+					> i
+						+size(100px 100px)
+						background-color: $client-purple
+						display: block
+				.print
+					i.icon-print
+				.request
+					i.icon-ask
+				.email
+					i.icon-email
+				.order
+					i.icon-order
+
+		.option-content
+			padding: 0 100px
+			.print
+			.request
+			.email
+			.order
+			.left, .right
+				padding: 0 20px
+				+span-columns(6)
+				label
+				input
+
+				.address
+					label
+					input
+					select
+						option
+
+				button
+				.sims
+					p 
+					ul
+						li
+							+palette-holders()

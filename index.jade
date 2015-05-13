@@ -3,11 +3,115 @@ html(lang="en")
 	include ./inc/head.jade
 
 body
-	.landing
-		.title
-			h1 Landing Page
-	.cover
-	.wrapper
-		include ./inc/client-banner.jade
-		include ./inc/configuration.jade
-		include ./inc/financing.jade
+	section
+		.swatches.color-wow-box
+			//- - var n = 0
+			//- 	while n < 184
+			//- 		span.box= n++
+		.sidebar
+			.product
+				select
+					option Select a Product Line
+			.photo
+				button Upload a photo
+			.hover
+				
+			.palette
+				ul.colors#palette-preview
+					li#palette1
+					li#palette2
+					li#palette3
+					li#palette4
+					li#palette5
+					li#palette6
+			.photo-preview
+				img(src="http://placehold.it/120x120", alt="")
+	section
+		.sims
+			hr
+			p.instruction Carpet Simulations
+			ul.renders
+				li
+				li
+				li
+				li
+				li
+				li
+	section
+		.options
+			.icons
+				.print
+					i.icon-print
+				.request
+					i.icon-ask
+				.email
+					i.icon-email
+				.order
+					i.icon-order
+	section
+		.option-content
+			.print.hide
+				| Send out to print css page
+			.request
+				.left
+					label(for="")
+					input(type="text")
+					label(for="")
+					input(type="email")
+					label(for="")
+					input(type="text" id="company")
+					label(for="")
+					input(type="text")
+					button Submit
+					button Cancel
+				.right
+					label(for="")
+					textarea#note(name="", cols="30", rows="10")
+			.email.hide
+				.left
+					label(for="")
+					input(type="text")
+					label(for="")
+					input(type="email")
+					button Submit
+					button Cancel
+				.right
+					label(for="")
+					textarea#note(name="", cols="30", rows="10")
+			.order.hide
+				.left
+					label(for="")
+					input(type="text")
+					label(for="")
+					input(type="email")
+					label(for="")
+					input(type="phone")
+					label(for="")
+					input(type="text" id="company")
+
+					.address
+						label(for="")
+						input(type="text" id="address-1")
+						label(for="")
+						input(type="text" id="address-1")
+						label(for="")
+						input(type="" id="city")
+						select
+							option TN
+						label(for="")
+						input(type="text" id="zip")
+
+					button Submit
+					button Cancel
+				.right
+					label(for="")
+					input(type="textarea" id="company")
+					.sims
+						p Select Simulations to include
+						ul#order-sims
+							li
+							li
+							li
+							li
+							li
+							li
