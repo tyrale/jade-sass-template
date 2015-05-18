@@ -21,6 +21,10 @@ $.getJSON("json/full-swatches.aspx", function () { })
     })
 }
 
+function clearSelection (palette_id) {
+    $(palette_id).css('background-image', 'none');
+}
+
 function setRightBoxes(data) {
     for (var i = 0; i <= 6; i++) {
         if ($('#palette'+i).css('background-image') == "none") {
@@ -38,6 +42,19 @@ function hoverHighRes(data){
 }
 
 $(document).ready(function() {
+$('.dropzone').html5imageupload();
+
+$('.icons > div').click(function() {
+    $('.icons > div').children().removeClass('selected')
+    $(this).children().addClass('selected');
+    $('.option-content > div').removeClass('selected');
+    $(".option-content ." + $(this).attr('class')).addClass('selected');
+});
+
+$('#order-sims > li').click(function() {
+    $(this).toggleClass('selected');
+});
+
 // COLOR WOW FNCTIONS
 function colorWow() {
     $.getJSON("json/full-swatches.aspx", function () { })
@@ -52,8 +69,6 @@ function colorWow() {
     .always(function () { });
 }
 colorWow();
-
-
 
 function processWowJson(data) {
     var html = '';

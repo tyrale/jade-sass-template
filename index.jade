@@ -4,6 +4,9 @@ html(lang="en")
 
 body
 	section
+		.dropzone(data-width="960" data-height="540" data-resize="true" data-url="http://uf.dev.ndandp.com/portals/0/skins/uf/app_services/uploadPhotoFromColorTool.aspx " style="width: 100%")
+			input(type="file" name="thumb")
+
 		.swatches.color-wow-box
 			//- - var n = 0
 			//- 	while n < 184
@@ -19,6 +22,7 @@ body
 			.palette
 				ul.colors#palette-preview
 					li#palette1
+						span(onclick="clearSelection('#palette1')") x
 					li#palette2
 					li#palette3
 					li#palette4
@@ -31,87 +35,88 @@ body
 			hr
 			p.instruction Carpet Simulations
 			ul.renders
-				li
-				li
-				li
-				li
-				li
-				li
-	section
+				li.sim-1
+				li.sim-2
+				li.sim-3
+				li.sim-4
+				li.sim-5
+	section.actions
+		hr
+		p.instruction Action Options
 		.options
 			.icons
 				.print
 					i.icon-print
+					p.step Print
 				.request
-					i.icon-ask
+					i.icon-ask.selected
+					p.step Request Info
 				.email
 					i.icon-email
+					p.step Email
 				.order
 					i.icon-order
+					p.step Order Samples
 	section
 		.option-content
-			.print.hide
+			.print
 				| Send out to print css page
-			.request
+			.request.selected
 				.left
 					label(for="")
-					input(type="text")
+					input(type="text" placeholder="Your Name")
 					label(for="")
-					input(type="email")
+					input(type="email" placeholder="Your Email")
 					label(for="")
-					input(type="text" id="company")
+					input(type="text" id="company" placeholder="Your Company")
 					label(for="")
-					input(type="text")
-					button Submit
-					button Cancel
+					input(type="text" placeholder="(***) ***-****")
+					button.gray Submit Request
 				.right
 					label(for="")
-					textarea#note(name="", cols="30", rows="10")
-			.email.hide
+					textarea#request-note(name="", cols="30", rows="10" placeholder="Let us know what you would like to hear about.")
+			.email
 				.left
 					label(for="")
-					input(type="text")
+					input(type="text" placeholder="Your Name")
 					label(for="")
-					input(type="email")
-					button Submit
-					button Cancel
+					input(type="email" placeholder="Your Email")
+					button.gray Send Email
 				.right
 					label(for="")
-					textarea#note(name="", cols="30", rows="10")
-			.order.hide
+					textarea#email-note(name="", cols="30", rows="10" placeholder="What message would you like to send?")
+			.order
 				.left
 					label(for="")
-					input(type="text")
+					input(type="text" placeholder="Your Name")
 					label(for="")
-					input(type="email")
+					input(type="email" placeholder="Your Email")
 					label(for="")
-					input(type="phone")
+					input(type="phone" placeholder="(***) ***-****")
 					label(for="")
-					input(type="text" id="company")
+					input(type="text" id="company" placeholder="Your Company")
 
 					.address
 						label(for="")
-						input(type="text" id="address-1")
+						input(type="text" id="address-1" placeholder="Your Address")
 						label(for="")
 						input(type="text" id="address-1")
 						label(for="")
-						input(type="" id="city")
+						input(type="text" id="city" placeholder="City")
 						select
 							option TN
 						label(for="")
-						input(type="text" id="zip")
+						input(type="text" id="zip" placeholder="ZIP")
 
-					button Submit
-					button Cancel
+					button.gray Place Order
 				.right
 					label(for="")
-					input(type="textarea" id="company")
+					textarea#order-note(name="", cols="30", rows="10" placeholder="Let us know what you would like to hear about.")
 					.sims
 						p Select Simulations to include
 						ul#order-sims
-							li
-							li
-							li
-							li
-							li
-							li
+							li.sim-1
+							li.sim-2
+							li.sim-3
+							li.sim-4
+							li.sim-5

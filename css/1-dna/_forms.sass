@@ -1,3 +1,19 @@
+=inputs()
+	border: solid 1px #7aacc8
+	color: #5595b8
+	border-radius: 0
+	height: 42px
+	display: block
+	padding: 6px 12px
+	font-size: 14px
+	line-height: 1.42857143
+	background-color: #fff
+	background-image: none
+	text-transform: uppercase
+	width: 100%
+	+transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s)
+	+appearance(none)
+
 select
 	background: #fff
 	width: 100%
@@ -12,3 +28,15 @@ select
 
 button
 	background-color: $client-yellow
+
+button.gray
+	color: #1c71a0
+	min-width: 200px
+	background: #ecedee
+
+input
+	&[type="text"], &[type="email"], &[type="phone"]
+		+inputs()
+textarea
+	+inputs()
+	height: 200px

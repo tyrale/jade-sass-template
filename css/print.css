@@ -473,301 +473,51 @@ textarea {
   appearance: none;
   height: 200px; }
 
-@media screen {
+@media print {
+  body .product,
+  body .photo,
+  body .photo-preview,
+  body .options,
+  body .hover,
+  body .swatches,
+  body .option-content,
+  body .actions,
   body .hide {
     display: none; }
-  body section {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3.75rem; }
-    body section:after {
-      content: "";
-      display: table;
-      clear: both; }
-    body section .swatches {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 65.88078%;
-      margin-top: 1.875rem; }
-      body section .swatches:last-child {
-        margin-right: 0; }
-      body section .swatches .color-wow-item {
-        height: 40px;
-        width: 40px;
-        overflow: hidden;
-        float: left;
-        position: relative; }
-        body section .swatches .color-wow-item img {
-          height: 100%; }
-        body section .swatches .color-wow-item:before {
-          content: "";
-          border: 4px solid transparent;
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0; }
-        body section .swatches .color-wow-item:hover:before {
-          border-color: #f0d53e; }
-    body section .sidebar {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%;
-      margin-right: 0; }
-      body section .sidebar:last-child {
-        margin-right: 0; }
-      body section .sidebar .product {
-        margin-bottom: 1.25rem; }
-      body section .sidebar .hover {
-        margin-top: 0.625rem;
-        background-color: #1c71a0;
-        overflow: hidden;
-        height: 160px;
-        position: relative; }
-        body section .sidebar .hover:before {
-          content: "Swatch Preview";
-          position: absolute;
-          bottom: 0.625rem;
-          left: 0.625rem; }
-        body section .sidebar .hover img {
-          width: 100%; }
-      body section .sidebar .palette {
-        height: 180px;
-        overflow: hidden; }
-        body section .sidebar .palette:after {
-          content: "";
-          display: table;
-          clear: both; }
-        body section .sidebar .palette ul.colors li {
-          width: -webkit-calc(33.333% - 7px);
-          width: calc(33.333% - 7px);
-          height: 80px;
-          float: left;
-          margin: 10px 10px 0 0;
-          background-color: whitesmoke;
-          border: 1px solid #9f9f9f;
-          background-size: cover; }
-          body section .sidebar .palette ul.colors li:nth-of-type(3n) {
-            margin-right: 0; }
-      body section .sidebar .photo-preview {
-        margin-top: 0.625rem;
-        background-color: #1c71a0;
-        overflow: hidden;
-        height: 160px;
-        position: relative; }
-        body section .sidebar .photo-preview:before {
-          content: "Photo Preview";
-          position: absolute;
-          bottom: 0.625rem;
-          left: 0.625rem; }
-        body section .sidebar .photo-preview img {
-          width: 100%; }
-    body section .sims ul.renders > li {
-      width: -webkit-calc(20% - 16px);
-      width: calc(20% - 16px);
-      height: 200px;
-      float: left;
-      margin: 20px 20px 0 0;
-      border: 1px solid #9f9f9f;
-      background-color: whitesmoke; }
-      body section .sims ul.renders > li:nth-of-type(5n) {
-        margin-right: 0; }
-    body section .options {
-      padding: 0 100px; }
-      body section .options .icons {
-        text-align: center; }
-        body section .options .icons > div {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 23.23176%; }
-          body section .options .icons > div:last-child {
-            margin-right: 0; }
-          body section .options .icons > div > i {
-            height: 80px;
-            width: 80px;
-            display: block;
-            background-repeat: no-repeat;
-            background-size: 80px 80px;
-            margin: 2.5rem auto 1.25rem; }
-            body section .options .icons > div > i.selected ~ p {
-              color: #1c71a0; }
-        body section .options .icons .print i.icon-print {
-          background-image: url("../img/printer.svg"); }
-          body section .options .icons .print i.icon-print.selected {
-            background-image: url("../img/printer-color.svg"); }
-        body section .options .icons .request i.icon-ask {
-          background-image: url("../img/info.svg"); }
-          body section .options .icons .request i.icon-ask.selected {
-            background-image: url("../img/info-color.svg"); }
-        body section .options .icons .email i.icon-email {
-          background-image: url("../img/mail.svg"); }
-          body section .options .icons .email i.icon-email.selected {
-            background-image: url("../img/mail-color.svg"); }
-        body section .options .icons .order {
-          margin-right: 0; }
-          body section .options .icons .order i.icon-order {
-            background-image: url("../img/cube.svg"); }
-            body section .options .icons .order i.icon-order.selected {
-              background-image: url("../img/cube-color.svg"); }
-    body section .option-content {
-      padding: 0 100px;
-      height: 500px;
-      position: relative; }
-      body section .option-content > div {
-        position: absolute;
-        top: 200px;
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 82.94039%;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        opacity: 0; }
-        body section .option-content > div:last-child {
-          margin-right: 0; }
-        body section .option-content > div.selected {
-          opacity: 1;
-          top: 0; }
-      body section .option-content .left, body section .option-content .right {
-        padding: 0 20px;
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 48.82117%; }
-        body section .option-content .left:last-child, body section .option-content .right:last-child {
-          margin-right: 0; }
-        body section .option-content .left .sims, body section .option-content .right .sims {
-          margin-top: 20px; }
-          body section .option-content .left .sims ul li, body section .option-content .right .sims ul li {
-            width: -webkit-calc(33.333% - 7px);
-            width: calc(33.333% - 7px);
-            height: 80px;
-            float: left;
-            margin: 10px 10px 0 0;
-            background-color: whitesmoke;
-            border: 1px solid #9f9f9f;
-            background-size: cover; }
-            body section .option-content .left .sims ul li:nth-of-type(3n), body section .option-content .right .sims ul li:nth-of-type(3n) {
-              margin-right: 0; }
-            body section .option-content .left .sims ul li.selected, body section .option-content .right .sims ul li.selected {
-              border-color: #1c71a0;
-              border-width: 4px; } }
-.dropzone {
-  background-color: #eee;
-  text-align: center;
-  position: relative;
-  border: 1px solid #ddd;
-  display: inline-block; }
-  .dropzone:after {
-    content: "Drop your image here or click to add one!";
-    font-size: 30px;
-    color: #bbb;
-    position: absolute;
-    bottom: 60%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 0; }
-  .dropzone:before {
-    content: "";
-    font-family: "Glyphicons Halflings";
-    font-size: 60px;
-    color: #dbdbdb;
-    position: absolute;
-    top: 40%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 0; }
-  .dropzone.loading:after {
-    content: "Please wait, image is loading"; }
-  .dropzone.loading:before {
-    content: "î€£"; }
-  .dropzone.done:after, .dropzone.done:before {
-    content: ""; }
-  .dropzone.notAnImage {
-    background-color: #f2dede;
-    border-color: #ebccd1; }
-    .dropzone.notAnImage:after {
-      content: "The selected file is not an image!";
-      color: #a94442; }
-    .dropzone.notAnImage:before {
-      content: "î„‡";
-      color: #ebccd1; }
-  .dropzone.alert-danger {
-    background-color: #f2dede; }
-    .dropzone.alert-danger:after {
-      content: ""; }
-  .dropzone.smalltext:before, .dropzone.smalltext:after {
-    font-size: 20px; }
-  .dropzone > span {
-    font-size: 30px;
-    color: #bbb;
-    position: absolute;
-    top: 35%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 0; }
-    .dropzone > span.loader {
-      display: none; }
-  .dropzone > input[type=file] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 2;
-    height: 100%; }
-  .dropzone > input[type=text] {
-    display: none; }
-  .dropzone .progress {
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    display: none; }
-  .dropzone .cropWrapper {
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background-color: #eee; }
-  .dropzone img {
-    z-index: 5;
-    position: relative; }
-    .dropzone img.ghost {
-      opacity: 0.2;
-      z-index: auto;
-      float: left; }
-    .dropzone img.main {
-      cursor: move; }
-  .dropzone .final img.main {
-    cursor: auto; }
-  .dropzone img.preview {
+  body .sidebar {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
     width: 100%; }
-  .dropzone .tools {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 999;
-    display: inline-block; }
-    .dropzone .tools .btn {
-      min-width: initial; }
-    .dropzone .tools > * {
-      margin: 0 0 0 5px; }
-  .dropzone.smalltools .tools .btn {
-    padding: 1px 4px;
-    font-size: 12px; }
+    body .sidebar:last-child {
+      margin-right: 0; }
+    body .sidebar .palette {
+      height: 180px;
+      overflow: hidden; }
+      body .sidebar .palette:after {
+        content: "";
+        display: table;
+        clear: both; }
+      body .sidebar .palette ul.colors li {
+        width: -webkit-calc(33.333% - 7px);
+        width: calc(33.333% - 7px);
+        height: 80px;
+        float: left;
+        margin: 10px 10px 0 0;
+        background-color: whitesmoke;
+        border: 1px solid #9f9f9f;
+        background-size: cover; }
+        body .sidebar .palette ul.colors li:nth-of-type(3n) {
+          margin-right: 0; }
+  body .sims ul.renders > li {
+    width: -webkit-calc(45% - 16px);
+    width: calc(45% - 16px);
+    height: 150px;
+    float: left;
+    margin: 20px 20px 0 0;
+    border: 1px solid #9f9f9f;
+    background-color: whitesmoke; }
+    body .sims ul.renders > li:nth-of-type(5n) {
+      margin-right: 0; } }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=print.css.map */

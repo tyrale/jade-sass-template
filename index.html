@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <title>Jade Template</title>
-    <link href="css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="css/app.css" media="screen" rel="stylesheet">
+    <link href="css/print.css" media="print" rel="stylesheet">
+    <link href="css/html5imageupload.css" media="print" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/client.js"></script>
+    <script type="text/javascript" src="js/html5imageupload.js"></script>
   </head>
 </html>
 <body>
   <section>
+    <div data-width="960" data-height="540" data-resize="true" data-url="http://uf.dev.ndandp.com/portals/0/skins/uf/app_services/uploadPhotoFromColorTool.aspx " style="width: 100%" class="dropzone">
+      <input type="file" name="thumb">
+    </div>
     <div class="swatches color-wow-box">
     </div>
     <div class="sidebar">
@@ -24,7 +31,7 @@
       <div class="hover"></div>
       <div class="palette">
         <ul id="palette-preview" class="colors">
-          <li id="palette1"></li>
+          <li id="palette1"><span onclick="clearSelection('#palette1')">x</span></li>
           <li id="palette2"></li>
           <li id="palette3"></li>
           <li id="palette4"></li>
@@ -40,98 +47,103 @@
       <hr>
       <p class="instruction">Carpet Simulations</p>
       <ul class="renders">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li class="sim-1"></li>
+        <li class="sim-2"></li>
+        <li class="sim-3"></li>
+        <li class="sim-4"></li>
+        <li class="sim-5"></li>
       </ul>
     </div>
   </section>
-  <section>
+  <section class="actions">
+    <hr>
+    <p class="instruction">Action Options</p>
     <div class="options">
       <div class="icons">
-        <div class="print"><i class="icon-print"></i></div>
-        <div class="request"><i class="icon-ask"></i></div>
-        <div class="email"><i class="icon-email"></i></div>
-        <div class="order"><i class="icon-order"></i></div>
+        <div class="print"><i class="icon-print"></i>
+          <p class="step">Print</p>
+        </div>
+        <div class="request"><i class="icon-ask selected"></i>
+          <p class="step">Request Info</p>
+        </div>
+        <div class="email"><i class="icon-email"></i>
+          <p class="step">Email</p>
+        </div>
+        <div class="order"><i class="icon-order"></i>
+          <p class="step">Order Samples</p>
+        </div>
       </div>
     </div>
   </section>
   <section>
     <div class="option-content">
-      <div class="print hide">Send out to print css page</div>
-      <div class="request">
+      <div class="print">Send out to print css page</div>
+      <div class="request selected">
         <div class="left">
           <label for=""></label>
-          <input type="text">
+          <input type="text" placeholder="Your Name">
           <label for=""></label>
-          <input type="email">
+          <input type="email" placeholder="Your Email">
           <label for=""></label>
-          <input type="text" id="company">
+          <input type="text" id="company" placeholder="Your Company">
           <label for=""></label>
-          <input type="text">
-          <button>Submit</button>
-          <button>Cancel</button>
+          <input type="text" placeholder="(***) ***-****">
+          <button class="gray">Submit Request</button>
         </div>
         <div class="right">
           <label for=""></label>
-          <textarea id="note" name="" cols="30" rows="10"></textarea>
+          <textarea id="request-note" name="" cols="30" rows="10" placeholder="Let us know what you would like to hear about."></textarea>
         </div>
       </div>
-      <div class="email hide">
+      <div class="email">
         <div class="left">
           <label for=""></label>
-          <input type="text">
+          <input type="text" placeholder="Your Name">
           <label for=""></label>
-          <input type="email">
-          <button>Submit</button>
-          <button>Cancel</button>
+          <input type="email" placeholder="Your Email">
+          <button class="gray">Send Email</button>
         </div>
         <div class="right">
           <label for=""></label>
-          <textarea id="note" name="" cols="30" rows="10"></textarea>
+          <textarea id="email-note" name="" cols="30" rows="10" placeholder="What message would you like to send?"></textarea>
         </div>
       </div>
-      <div class="order hide">
+      <div class="order">
         <div class="left">
           <label for=""></label>
-          <input type="text">
+          <input type="text" placeholder="Your Name">
           <label for=""></label>
-          <input type="email">
+          <input type="email" placeholder="Your Email">
           <label for=""></label>
-          <input type="phone">
+          <input type="phone" placeholder="(***) ***-****">
           <label for=""></label>
-          <input type="text" id="company">
+          <input type="text" id="company" placeholder="Your Company">
           <div class="address">
             <label for=""></label>
-            <input type="text" id="address-1">
+            <input type="text" id="address-1" placeholder="Your Address">
             <label for=""></label>
             <input type="text" id="address-1">
             <label for=""></label>
-            <input type="" id="city">
+            <input type="text" id="city" placeholder="City">
             <select>
               <option>TN</option>
             </select>
             <label for=""></label>
-            <input type="text" id="zip">
+            <input type="text" id="zip" placeholder="ZIP">
           </div>
-          <button>Submit</button>
-          <button>Cancel</button>
+          <button class="gray">Place Order</button>
         </div>
         <div class="right">
           <label for=""></label>
-          <input type="textarea" id="company">
+          <textarea id="order-note" name="" cols="30" rows="10" placeholder="Let us know what you would like to hear about."></textarea>
           <div class="sims">
             <p>Select Simulations to include</p>
             <ul id="order-sims">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li class="sim-1"></li>
+              <li class="sim-2"></li>
+              <li class="sim-3"></li>
+              <li class="sim-4"></li>
+              <li class="sim-5"></li>
             </ul>
           </div>
         </div>

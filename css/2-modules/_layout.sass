@@ -1,100 +1,126 @@
-body
-	.hide
-		display: none
-	section
-		+outer-container
-		margin-bottom: rem(60px)
-		.swatches
-			+span-columns(8)
-			margin-top: rem(30)
-			.color-wow-item
-				+size(40px 40px)
-				overflow: hidden
-				float: left
-				+position(relative)
-				img
-					height: 100%
-				&:before
-					content: ''
-					border: 4px solid transparent
-					+position(absolute, 0 0 0 0)
-				&:hover:before
-					border-color: $client-yellow
-		.sidebar
-			+span-columns(4)
-			+omega
-			.product
-				margin-bottom: rem(20)
-				select
-					option
-
-			.photo
-				a
-			.hover
-				+preview("Swatch Preview")
-			.palette
-				+clearfix
-				height: 180px
-				overflow: hidden
-				ul.colors
-					li
-						+palette-holders()
-
-			.photo-preview
-				+preview("Photo Preview")
-		.sims
-			h2
-			ul.renders
-				> li
-					$width: 33.333%
-					+calc(width, "#{$width} - 14px")
-					height: 200px
+@media screen
+	body
+		.hide
+			display: none
+		section
+			+outer-container
+			margin-bottom: rem(60px)
+			.swatches
+				+span-columns(8)
+				margin-top: rem(30)
+				.color-wow-item
+					+size(40px 40px)
+					overflow: hidden
 					float: left
-					margin: 20px 20px 0 0
-					background-color: $client-gray-light
-					&:nth-of-type(3n)
-						background-color: red
-						margin-right: 0
-
-		.options
-			padding: 0 100px
-			.icons
-				> div
-					+span-columns(3)
-					> i
-						+size(100px 100px)
-						background-color: $client-purple
-						display: block
-				.print
-					i.icon-print
-				.request
-					i.icon-ask
-				.email
-					i.icon-email
-				.order
-					i.icon-order
-
-		.option-content
-			padding: 0 100px
-			.print
-			.request
-			.email
-			.order
-			.left, .right
-				padding: 0 20px
-				+span-columns(6)
-				label
-				input
-
-				.address
-					label
-					input
+					+position(relative)
+					img
+						height: 100%
+					&:before
+						content: ''
+						border: 4px solid transparent
+						+position(absolute, 0 0 0 0)
+					&:hover:before
+						border-color: $client-yellow
+			.sidebar
+				+span-columns(4)
+				+omega
+				.product
+					margin-bottom: rem(20)
 					select
 						option
 
-				button
-				.sims
-					p 
-					ul
+				.photo
+					a
+				.hover
+					+preview("Swatch Preview")
+				.palette
+					+clearfix
+					height: 180px
+					overflow: hidden
+					ul.colors
 						li
 							+palette-holders()
+
+				.photo-preview
+					+preview("Photo Preview")
+			.sims
+				h2
+				ul.renders
+					> li
+						+sims-holders()
+
+			.options
+				padding: 0 100px
+				.icons
+					text-align: center
+					> div
+						+span-columns(3)
+						> i
+							+size(80px 80px)
+							//background-color: $client-purple
+							display: block
+							background-repeat: no-repeat
+							background-size: 80px 80px
+							margin: rem(40) auto rem(20)
+							&.selected ~ p
+								color: #1c71a0
+					.print
+						i.icon-print
+							background-image: url('../img/printer.svg')
+							&.selected
+								background-image: url('../img/printer-color.svg')
+					.request
+						i.icon-ask
+							background-image: url('../img/info.svg')
+							&.selected
+								background-image: url('../img/info-color.svg')
+					.email
+						i.icon-email
+							background-image: url('../img/mail.svg')
+							&.selected
+								background-image: url('../img/mail-color.svg')
+					.order
+						+omega
+						i.icon-order
+							background-image: url('../img/cube.svg')
+							&.selected
+								background-image: url('../img/cube-color.svg')
+
+			.option-content
+				padding: 0 100px
+				+size(inherit 500px)
+				+position(relative)
+				> div
+					+position(absolute, 200px null null)
+					+span-columns(10)
+					+transition(all 0.3s ease-in-out)
+					opacity: 0
+					&.selected
+						opacity: 1
+						top: 0
+				.print
+				.request
+				.email
+				.order
+				.left, .right
+					padding: 0 20px
+					+span-columns(6)
+					label
+					input
+
+					.address
+						label
+						input
+						select
+							option
+
+					button
+					.sims
+						margin-top: 20px
+						p 
+						ul
+							li
+								+palette-holders()
+								&.selected
+									border-color: $client-blue
+									border-width: 4px
