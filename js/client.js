@@ -1,7 +1,7 @@
-$(function() {
-    $( "#palette-preview" ).sortable();
-    $( "#palette-preview" ).disableSelection();
-  });
+// $(function() {
+//     $( "#palette-preview" ).sortable();
+//     $( "#palette-preview" ).disableSelection();
+//   });
 
 
 var lastDataPull;
@@ -49,6 +49,20 @@ $('.icons > div').click(function() {
     $(this).children().addClass('selected');
     $('.option-content > div').removeClass('selected');
     $(".option-content ." + $(this).attr('class')).addClass('selected');
+});
+
+$('.cover').click(function() {
+    $('.product').addClass('show');
+    $(this).toggleClass('hide');
+});
+
+$('.alert .gray').click(function() {
+   $('.product').removeClass('show'); 
+   $('.cover').toggleClass('hide');
+});
+
+$('.alert .blue').click(function() {
+   $('.product').removeClass('show'); 
 });
 
 $('#order-sims > li').click(function() {

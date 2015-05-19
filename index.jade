@@ -4,32 +4,45 @@ html(lang="en")
 
 body
 	section
-		.dropzone(data-width="960" data-height="540" data-resize="true" data-url="http://uf.dev.ndandp.com/portals/0/skins/uf/app_services/uploadPhotoFromColorTool.aspx " style="width: 100%")
-			input(type="file" name="thumb")
-
 		.swatches.color-wow-box
-			//- - var n = 0
-			//- 	while n < 184
-			//- 		span.box= n++
 		.sidebar
 			.product
+				.cover
+				.alert
+					p.instruction 
+					| Changing the product line will reset
+					br
+					| any selected colors.
+					button.blue Ok, reset and change lines.
+					button.gray No, cancel.
 				select
 					option Select a Product Line
 			.photo
 				button Upload a photo
+			.photo-preview
+				.dropzone(data-width="960" data-height="540" data-resize="true" data-url="http://uf.dev.ndandp.com/portals/0/skins/uf/app_services/uploadPhotoFromColorTool.aspx " style="width: 100%")
+					input(type="file" name="thumb")
 			.hover
-				
+				.preview-name
+					| Color name
+					span
+						| &nbsp;#72636
 			.palette
 				ul.colors#palette-preview
 					li#palette1
 						span(onclick="clearSelection('#palette1')") x
 					li#palette2
+						span(onclick="clearSelection('#palette2')") x
 					li#palette3
+						span(onclick="clearSelection('#palette3')") x
 					li#palette4
+						span(onclick="clearSelection('#palette4')") x
 					li#palette5
+						span(onclick="clearSelection('#palette5')") x
 					li#palette6
-			.photo-preview
-				img(src="http://placehold.it/120x120", alt="")
+						span(onclick="clearSelection('#palette6')") x
+
+			button.gray save palette
 	section
 		.sims
 			hr

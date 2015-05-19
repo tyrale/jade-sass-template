@@ -29,10 +29,16 @@ select
 button
 	background-color: $client-yellow
 
-button.gray
-	color: #1c71a0
-	min-width: 200px
-	background: #ecedee
+button
+	&.gray
+		color: #1c71a0
+		min-width: 200px
+		background: #ecedee
+	&.blue
+		color: #ecedee
+		min-width: 200px
+		background: #1c71a0
+
 
 input
 	&[type="text"], &[type="email"], &[type="phone"]

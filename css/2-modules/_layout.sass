@@ -26,13 +26,50 @@
 				+omega
 				.product
 					margin-bottom: rem(20)
-					select
-						option
+					+position(relative)
+					+transition(all 0.3s ease-in-out)
+					.cover
+						+position(absolute, 0 0 0 0)
+						z-index: 10
+					.alert
+						+transition(all 0.3s ease-in-out)
+						height: 0px
+						overflow: hidden
+						background-color: #ecedee
+						text-align: center
+						border: 1px solid #7CACC7
+						font-size: rem(24)
+						+position(absolute, 0px null null)
+						z-index: 1
+						padding: 0
+						border-color: transpartent
+						padding: 0px
+						button
+							width: 100%
+							&.gray
+								border: 1px solid #7CACC7
+								margin-top: 10px
+								opacity: 0.5
+							&.blue
+								margin-top: 20px
+								background-color: #7CACC7
 
+					&.show
+						height: 200px 
+						.alert
+							height: inherit
+							padding: 15px
 				.photo
 					a
 				.hover
-					+preview("Swatch Preview")
+					+preview("")
+					.preview-name
+						+position(absolute)
+						bottom: 0
+						+size(100% 24px)
+						background-color: rgba(0,0,0,0.5)
+						text-align: center
+						color: white
 				.palette
 					+clearfix
 					height: 180px
@@ -40,9 +77,24 @@
 					ul.colors
 						li
 							+palette-holders()
+							+position(relative)
+							span
+								opacity: 0
+								+position(absolute)
+								bottom: 0
+								+size(100% 24px)
+								background-color: rgba(0,0,0,0.5)
+								text-align: center
+								color: white
+								+transition(opacity 0.3s ease-in-out)
+							&:hover span
+								opacity: 1
+				button.gray
+					margin-top: 20px
+					width: 100%
 
 				.photo-preview
-					+preview("Photo Preview")
+					+preview("Upload Preview")
 			.sims
 				h2
 				ul.renders

@@ -1,14 +1,15 @@
+@charset "utf-8"
 
 .dropzone
-  background-color: #eee
+  background-color: #eeeeee
   text-align: center
   position: relative
-  border: 1px solid #ddd
+  border: 1px solid #dddddd
   display: inline-block
   &:after
     content: 'Drop your image here or click to add one!'
     font-size: 30px
-    color: #bbb
+    color: #bbbbbb
     position: absolute
     bottom: 60%
     left: 0
@@ -28,12 +29,12 @@
     z-index: 0
   &.loading
     &:after
-      content: "Please wait, image is loading"
+      content: 'Please wait, image is loading'
     &:before
-      content: "î€£"
+      content: ''
   &.done
     &:after, &:before
-      content: ""
+      content: ''
   &.notAnImage
     background-color: #f2dede
     border-color: #ebccd1
@@ -41,19 +42,19 @@
       content: 'The selected file is not an image!'
       color: #a94442
     &:before
-      content: 'î„‡'
+      content: ''
       color: #ebccd1
   &.alert-danger
     background-color: #f2dede
     &:after
-      content: ""
+      content: ''
   &.smalltext
     &:before, &:after
       font-size: 20px
   >
     span
       font-size: 30px
-      color: #bbb
+      color: #bbbbbb
       position: absolute
       top: 35%
       left: 0
@@ -89,7 +90,8 @@
     left: 0
     right: 0
     z-index: 10
-    background-color: #eee
+    background-color: #eeeeee
+    text-align: left
   img
     z-index: 5
     position: relative
@@ -109,10 +111,20 @@
     right: 10px
     z-index: 999
     display: inline-block
-    .btn
-      min-width: initial
     > *
       margin: 0 0 0 5px
   &.smalltools .tools .btn
     padding: 1px 4px
     font-size: 12px
+  .download
+    position: absolute
+    bottom: 10px
+    left: 10px
+    z-index: 999
+    display: inline-block
+    > *
+      margin: 0 0 0 5px
+
+/* not an image
+
+/*.dropzone canvas.final      { background-color: #eeeeee;}

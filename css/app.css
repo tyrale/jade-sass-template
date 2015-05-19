@@ -82,11 +82,6 @@ hr {
   border-top: none;
   margin: 1.5em 0; }
 
-img,
-picture {
-  margin: 0;
-  max-width: 100%; }
-
 blockquote {
   border-left: 2px solid #DDD;
   color: #595959;
@@ -427,6 +422,10 @@ button.gray {
   color: #1c71a0;
   min-width: 200px;
   background: #ecedee; }
+button.blue {
+  color: #ecedee;
+  min-width: 200px;
+  background: #1c71a0; }
 
 input[type="text"], input[type="email"], input[type="phone"] {
   border: solid 1px #7aacc8;
@@ -520,7 +519,48 @@ textarea {
       body section .sidebar:last-child {
         margin-right: 0; }
       body section .sidebar .product {
-        margin-bottom: 1.25rem; }
+        margin-bottom: 1.25rem;
+        position: relative;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+        body section .sidebar .product .cover {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 10; }
+        body section .sidebar .product .alert {
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          height: 0px;
+          overflow: hidden;
+          background-color: #ecedee;
+          text-align: center;
+          border: 1px solid #7CACC7;
+          font-size: 1.5rem;
+          position: absolute;
+          top: 0px;
+          z-index: 1;
+          padding: 0;
+          border-color: transpartent;
+          padding: 0px; }
+          body section .sidebar .product .alert button {
+            width: 100%; }
+            body section .sidebar .product .alert button.gray {
+              border: 1px solid #7CACC7;
+              margin-top: 10px;
+              opacity: 0.5; }
+            body section .sidebar .product .alert button.blue {
+              margin-top: 20px;
+              background-color: #7CACC7; }
+        body section .sidebar .product.show {
+          height: 200px; }
+          body section .sidebar .product.show .alert {
+            height: inherit;
+            padding: 15px; }
       body section .sidebar .hover {
         margin-top: 0.625rem;
         background-color: #1c71a0;
@@ -528,12 +568,20 @@ textarea {
         height: 160px;
         position: relative; }
         body section .sidebar .hover:before {
-          content: "Swatch Preview";
+          content: "";
           position: absolute;
           bottom: 0.625rem;
           left: 0.625rem; }
         body section .sidebar .hover img {
           width: 100%; }
+        body section .sidebar .hover .preview-name {
+          position: absolute;
+          bottom: 0;
+          height: 24px;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          text-align: center;
+          color: white; }
       body section .sidebar .palette {
         height: 180px;
         overflow: hidden; }
@@ -549,9 +597,27 @@ textarea {
           margin: 10px 10px 0 0;
           background-color: whitesmoke;
           border: 1px solid #9f9f9f;
-          background-size: cover; }
+          background-size: cover;
+          position: relative; }
           body section .sidebar .palette ul.colors li:nth-of-type(3n) {
             margin-right: 0; }
+          body section .sidebar .palette ul.colors li span {
+            opacity: 0;
+            position: absolute;
+            bottom: 0;
+            height: 24px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: white;
+            -webkit-transition: opacity 0.3s ease-in-out;
+            -moz-transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out; }
+          body section .sidebar .palette ul.colors li:hover span {
+            opacity: 1; }
+      body section .sidebar button.gray {
+        margin-top: 20px;
+        width: 100%; }
       body section .sidebar .photo-preview {
         margin-top: 0.625rem;
         background-color: #1c71a0;
@@ -559,7 +625,7 @@ textarea {
         height: 160px;
         position: relative; }
         body section .sidebar .photo-preview:before {
-          content: "Photo Preview";
+          content: "Upload Preview";
           position: absolute;
           bottom: 0.625rem;
           left: 0.625rem; }
@@ -658,15 +724,15 @@ textarea {
               border-color: #1c71a0;
               border-width: 4px; } }
 .dropzone {
-  background-color: #eee;
+  background-color: #eeeeee;
   text-align: center;
   position: relative;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   display: inline-block; }
   .dropzone:after {
     content: "Drop your image here or click to add one!";
     font-size: 30px;
-    color: #bbb;
+    color: #bbbbbb;
     position: absolute;
     bottom: 60%;
     left: 0;
@@ -687,7 +753,7 @@ textarea {
   .dropzone.loading:after {
     content: "Please wait, image is loading"; }
   .dropzone.loading:before {
-    content: "î€£"; }
+    content: ""; }
   .dropzone.done:after, .dropzone.done:before {
     content: ""; }
   .dropzone.notAnImage {
@@ -697,7 +763,7 @@ textarea {
       content: "The selected file is not an image!";
       color: #a94442; }
     .dropzone.notAnImage:before {
-      content: "î„‡";
+      content: "";
       color: #ebccd1; }
   .dropzone.alert-danger {
     background-color: #f2dede; }
@@ -707,7 +773,7 @@ textarea {
     font-size: 20px; }
   .dropzone > span {
     font-size: 30px;
-    color: #bbb;
+    color: #bbbbbb;
     position: absolute;
     top: 35%;
     left: 0;
@@ -742,7 +808,8 @@ textarea {
     left: 0;
     right: 0;
     z-index: 10;
-    background-color: #eee; }
+    background-color: #eeeeee;
+    text-align: left; }
   .dropzone img {
     z-index: 5;
     position: relative; }
@@ -762,12 +829,21 @@ textarea {
     right: 10px;
     z-index: 999;
     display: inline-block; }
-    .dropzone .tools .btn {
-      min-width: initial; }
     .dropzone .tools > * {
       margin: 0 0 0 5px; }
   .dropzone.smalltools .tools .btn {
     padding: 1px 4px;
     font-size: 12px; }
+  .dropzone .download {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 999;
+    display: inline-block; }
+    .dropzone .download > * {
+      margin: 0 0 0 5px; }
+
+/* not an image */
+/*.dropzone canvas.final      { background-color: #eeeeee;} */
 
 /*# sourceMappingURL=app.css.map */

@@ -14,13 +14,15 @@
 </html>
 <body>
   <section>
-    <div data-width="960" data-height="540" data-resize="true" data-url="http://uf.dev.ndandp.com/portals/0/skins/uf/app_services/uploadPhotoFromColorTool.aspx " style="width: 100%" class="dropzone">
-      <input type="file" name="thumb">
-    </div>
-    <div class="swatches color-wow-box">
-    </div>
+    <div class="swatches color-wow-box"></div>
     <div class="sidebar">
       <div class="product">
+        <div class="cover"></div>
+        <div class="alert">
+          <p class="instruction"> </p>Changing the product line will reset<br>any selected colors.
+          <button class="blue">Ok, reset and change lines.</button>
+          <button class="gray">No, cancel.</button>
+        </div>
         <select>
           <option>Select a Product Line</option>
         </select>
@@ -28,18 +30,25 @@
       <div class="photo">
         <button>Upload a photo</button>
       </div>
-      <div class="hover"></div>
+      <div class="photo-preview">
+        <div data-width="960" data-height="540" data-resize="true" data-url="http://uf.dev.ndandp.com/portals/0/skins/uf/app_services/uploadPhotoFromColorTool.aspx " style="width: 100%" class="dropzone">
+          <input type="file" name="thumb">
+        </div>
+      </div>
+      <div class="hover">
+        <div class="preview-name">Color name<span>&nbsp;#72636</span></div>
+      </div>
       <div class="palette">
         <ul id="palette-preview" class="colors">
           <li id="palette1"><span onclick="clearSelection('#palette1')">x</span></li>
-          <li id="palette2"></li>
-          <li id="palette3"></li>
-          <li id="palette4"></li>
-          <li id="palette5"></li>
-          <li id="palette6"></li>
+          <li id="palette2"><span onclick="clearSelection('#palette2')">x</span></li>
+          <li id="palette3"><span onclick="clearSelection('#palette3')">x</span></li>
+          <li id="palette4"><span onclick="clearSelection('#palette4')">x</span></li>
+          <li id="palette5"><span onclick="clearSelection('#palette5')">x</span></li>
+          <li id="palette6"><span onclick="clearSelection('#palette6')">x</span></li>
         </ul>
       </div>
-      <div class="photo-preview"><img src="http://placehold.it/120x120" alt=""></div>
+      <button class="gray">save palette</button>
     </div>
   </section>
   <section>
